@@ -13442,3 +13442,8 @@ content-item {
 .my-card {
     height: 325px
 }
+.whatsapp_float {
+    position: fixed; 
+    bottom: 40px;
+    right:20px;
+    }
