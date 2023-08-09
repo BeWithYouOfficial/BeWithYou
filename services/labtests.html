@@ -1,38 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/version/css/all.min.css">
-    <script src="https://kit.fontawesome.com/5634cdeb75.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="Stylesheet" href="./app.css" />
-    <style>
-        /* Add margin at the bottom of each element */
-        #callback-name,
-        #callback-phone,
-        .btn {
-            margin-bottom: 20px;
-            /* Adjust the value as per your preference */
-        }
-    </style>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="path/to/bootstrap.min.css">
-
-    <!-- jQuery (if required) -->
-    <script src="path/to/jquery.min.js"></script>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="path/to/bootstrap.min.js"></script>
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="6OD8xKGC2a5d6Regfn31OzxSeZPmogLhvAlkdLu9">
+    <meta name="key" content="SKDVFEXP2QL7PZR2WKFJB324QLTDBUXC">
+    <meta name="google-site-verification" content="0cFgMARyYIqPxegj819sGdeB08wIl6BNfwftrmrKePQ" />
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <meta name="msapplication-TileColor" content="#008ccf">
+    <meta name="theme-color" content="#ffffff">
+    <title>Get Lab Report at Home - BeWithYou</title>
+    <meta name="description"
+        content="Get medical equipments on rent at home from BeWithYou. Life-saving & sustaining equipment for medical emergencies at your home. Available at affordable rents.">
+    <meta name="keywords"
+        content="medical equipments on rent, hospital bed on rent, cpap machine on rent, bpap machine on rent, oxygen cylinder on rent, oxygen concentrator on rent, wheel chair on rent, suction machine on rent, syringe pump on rent, medical equipment rental, medical equipment on rent in delhi, rent medical equipment">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    <link href="/css/app.css?id=7d375fc33d7f5d358d31" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXV5OchRy6I1AwQweD-ASx7cuzuGQ_4OA&libraries=places"
+        defer></script>
+    <link rel="Stylesheet" href="../app.css" />
+    <script src="/js/app.js?id=3b6281c44fcb4455bed3" defer></script>
 </head>
 
-<body>
+<body class="">
     <header class="">
         <div class="bg-dark">
             <div class="container px-0">
@@ -201,12 +193,10 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="dropdown-item"
-                                                        href="/equipments/suctionmachine.html">Suction
-                                                        Machine</a>
+                                                        href="/equipments/suctionmachine.html">Suction Machine</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="dropdown-item" href="/equipments/syringepump.html">Syringe
-                                                        Pump</a>
+                                                    <a class="dropdown-item" href="/equipments/syringepump.html">Syringe Pump</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -218,7 +208,7 @@
                                     Care</a>
                                 <a class="dropdown-item" href="/services/newbornbabycare.html">New Born Baby
                                     Care</a>
-
+                                <a class="dropdown-item" href="/services/labtests.html">Lab Tests</a>
                                 <a class="dropdown-item" href="/services/nutrition.html">Nutrition</a>
                             </div>
                         </li>
@@ -240,28 +230,55 @@
         </nav>
     </header>
 
+    <div class="modal fade" id="modal-callback" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center"> Please provide your number below and one of our consultants will call you
+                        shortly.</p>
+                    <form action="https://formsubmit.co/e725234dde380323c100a333726b5ede" method="post">
+                        <input type="hidden" name="_token" value="6OD8xKGC2a5d6Regfn31OzxSeZPmogLhvAlkdLu9"> <input
+                            type="hidden" name="modal" value="callback">
+                        <input type="hidden" name="service" value="Equipments">
+                        <div class="form-group">
+                            <label for="callback-name">Name</label>
+                            <input class="form-control " id="modal-callback-name" name="name" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="callback-phone">Phone number <span class="text-danger">&ast;</span></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">+91</span>
+                                </div>
+                                <input class="form-control " id="modal-callback-phone" name="phone" required type="tel"
+                                    value="">
+                            </div>
+                        </div>
+                        <div class="btn-toolbar">
+                            <button class="btn btn-primary btn-lg ml-auto">Get a callback <i
+                                    class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="bg-cover py-3 py-md-4 py-lg-5"
-        style="background-image: url('https://t3.ftcdn.net/jpg/06/15/47/96/360_F_615479641_otBeiWBjQSHpcFbx6NsT6uMj0tBFcRCa.webp') ">
+        style="background-image: url('/assets/hospital-bed.jpeg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xl-7 d-flex">
                     <div class="w-100 my-auto">
-                        <h1 class="font-alt text-center text-lg-left display-4 mb-3 mb-lg-5">
-                            <span class="bg-primary text-white px-3"><span class="d-none d-sm-inline">24x7</span>
-                                Healthcare</span>
+                        <h1 class="font-alt text-center text-lg-left display-5 mb-3 mb-lg-7">
+                            <span class="bg-black-50 rounded-lg text-white px-3">Lab Tests on One Call Request</span>
                             <br>
-                            <span class="bg-dark text-white px-3">Services at Home</span>
                         </h1>
                         <div class="bg-black-50 text-white rounded-lg p-4 mb-3 mb-lg-5">
-                            <h2 class="text-uppercase"><strong>Patient caring is our passion</strong></h2>
-                            <p class="lead">
-                                From nursing at home to elderly care, physiotherapists, medical tests and much more.
-                                BeWithYou delivers the best of healthcare services at your doorstep.
-                            </p>
-                            <p class="lead mb-0">In need of any of our service, <a class="text-white"
-                                    data-toggle="modal" href="#modal-callback"><u>get a callback</u></a> and <a
-                                    class="text-white" data-toggle="modal" href="#modal-callback"><u>discuss your
-                                        requirement</u></a>.</p>
+                            <h2 class="text-uppercase"><strong>COMPLETE BLOOD COUNT TEST</strong></h2>
+                            <p class="lead">Monitoring of level during treatment of a disease.</p>
+                            <p class="lead mb-0">For more information, <a class="text-white" data-toggle="modal"
+                                    href="#modal-callback"><u>get a callback</u></a> and <a class="text-white"
+                                    data-toggle="modal" href="#modal-callback"><u>discuss your requirement</u></a>.</p>
                         </div>
                         <div class="btn-toolbar">
                             <a onclick="gtag_report_conversion();"
@@ -275,186 +292,32 @@
             </div>
         </div>
     </section>
-
-    <section class="bg-light py-3 py-md-4 py-lg-5">
-        <div class="container">
-            <h3 class="text-center">
-                <a class="text-primary" data-toggle="modal" href="#modal-callback" style="text-decoration:none">Your
-                    healthcare partner</a>
-            </h3>
-            <p class="text-center mb-3 mb-lg-5">
-                BeWithYou stays around you in all the situations, making your world happier and healthier with our
-                quality
-                healthcare at home service catalog.
-            </p>
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-3 mb-lg-5">
-                        <div class="card-body text-center">
-                            <p class="card-text"><img alt="Attendants"
-                                    src="https://BeWithYou.com/images/icon-attendants.webp?id=641bf955e5dcaa33ec59">
-                            </p>
-                            <h4 class="card-title"><a class="text-secondary" data-toggle="modal"
-                                    href="modal-callback">Attendants</a></h4>
-                            <p class="card-text">Hire trained attendants for patient care at home.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Modal -->
-                <div class="modal" id="callbackModal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <p class="text-center">Please provide your number below, and one of our consultants will
-                                    call you shortly.</p>
-                                <form action="https://BeWithYou.com/forms/callback" method="post"
-                                    siq_id="autopick_9785">
-                                    <input type="hidden" name="_token" value="yTPeGh98Dc9y4D7F0WtlwiH5h7KkQuHcYRiyqTpS">
-                                    <input type="hidden" name="modal" value="callback">
-                                    <input type="hidden" name="service" value="">
-                                    <div class="form-group">
-                                        <label for="callback-name">Name</label>
-                                        <input class="form-control" id="modal-callback-name" name="name" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="callback-phone">Phone number <span
-                                                class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">+91</span>
-                                            </div>
-                                            <input class="form-control" id="modal-callback-phone" name="phone"
-                                                required="" type="tel" value="">
-                                        </div>
-                                    </div>
-                                    <div class="btn-toolbar">
-                                        <button class="btn btn-primary btn-lg ml-auto">Get a callback <i
-                                                class="fas fa-arrow-right ml-1"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-3 mb-lg-5">
-                        <div class="card-body text-center">
-                            <p class="card-text"><img alt="Nurse"
-                                    src="https://BeWithYou.com/images/icon-nurses.webp?id=22649e897faed4dcf4d9"></p>
-                            <h4 class="card-title"><a class="text-secondary" data-toggle="modal" href="modal-callback"
-                                    data-target="#callbackModal">Nurses</a></h4>
-                            <p class="card-text">Get qualified, skilled nurses for at home, expert care.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-3 mb-lg-5">
-                        <div class="card-body text-center">
-                            <p class="card-text"><img alt="Physiotherapy"
-                                    src="https://BeWithYou.com/images/icon-physiotherapy.webp?id=87d61853c7dd6bb2fa08">
-                            </p>
-                            <h4 class="card-title"><a class="text-secondary" data-toggle="modal" href="modal-callback"
-                                    data-target="#callbackModal">Physiotherapy</a></h4>
-                            <p class="card-text">Get rid of acute or other types of pain at your place.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-3 mb-lg-5">
-                        <div class="card-body text-center">
-                            <p class="card-text"><img alt="Elderly Care"
-                                    src="https://BeWithYou.com/images/icon-elderly-care.webp?id=87d61853c7dd6bb2fa08">
-                            </p>
-                            <h4 class="card-title"><a class="text-secondary" data-toggle="modal" href="modal-callback"
-                                    data-target="#callbackModal">Elderly Care</a></h4>
-                            <p class="card-text">Helping hand for your parents when you not around.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-3 mb-lg-0">
-                        <div class="card-body text-center">
-                            <p class="card-text"><img alt="Baby Care"
-                                    src="https://BeWithYou.com/images/icon-baby-care.webp?id=cfc8f501b1de5e43b8aa">
-                            </p>
-                            <h4 class="card-title"><a class="text-secondary" data-toggle="modal" href="modal-callback"
-                                    data-target="#callbackModal">Baby Care</a></h4>
-                            <p class="card-text">Caring nanny for new born babies just a call away.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-    <section class="py-3 py-md-4 py-lg-5">
+    <section class="py-5 py-md-4 py-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="card phone shadow mb-3 mb-lg-0">
+                <div class=" col-lg-12 ">
+                    <div class="card shadow phone mb-lg-0">
                         <div class="card-body">
-                            <p class="card-title text-uppercase h5"><strong>Talk to a Consultant</strong></p>
+                            <p class="card-title text-uppercase h5"><strong>Get in touch with
+                                our expert</strong></p>
                             <p class="card-text mb-3 mb-md-4 mb-lg-5">
-                                Submit your requirement with us and speak to one of our expert healthcare consultants.
+                                Get a callback from our executive to talk further about your requirements.
                             </p>
-                            <form id="inquiry-form" action="https://www.www.bewithyou/forms/requirement" method="post"
-                                siq_id="autopick_784">
-                                <input type="hidden" name="_token" value="zvJgXz10wh5DsfUNSNHGjFbyJKiiNPf6MLn4t0No">
+                            <form action="https://formsubmit.co/e725234dde380323c100a333726b5ede" method="POST">
+                                <input type="hidden" name="_token" value="6OD8xKGC2a5d6Regfn31OzxSeZPmogLhvAlkdLu9">
+                                <input type="hidden" name="service" value="Equipments">
                                 <div class="form-group">
-                                    <label for="requirement-name">Name <span class="text-danger">*</span></label>
+                                    <label for="requirement-name">Name <span class="text-danger">&ast;</span></label>
                                     <input class="form-control form-control-lg " id="requirement-name" name="name"
-                                        required="" value="">
+                                        required value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="requirement-phone">Phone number <span
-                                            class="text-danger">*</span></label>
+                                            class="text-danger">&ast;</span></label>
                                     <input class="form-control form-control-lg " id="requirement-phone" name="phone"
-                                        required="" type="tel" value="">
+                                        required type="tel" value="">
                                 </div>
-                                <div class="form-group">
-                                    <label for="requirement-service-attendant">Service <span
-                                            class="text-danger">*</span></label>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="requirement-service-doc" name="service"
-                                            class="custom-control-input" value="Doctor">
-                                        <label class="custom-control-label" for="requirement-service-doc">Doctor on
-                                            call</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="requirement-service-nurse" name="service"
-                                            class="custom-control-input" value="Nurse">
-                                        <label class="custom-control-label" for="requirement-service-nurse">Medical
-                                            nurse</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="requirement-service-attendant" name="service"
-                                            class="custom-control-input" value="Attendant" checked="">
-                                        <label class="custom-control-label" for="requirement-service-attendant">Care
-                                            taker
-                                            or attendant</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="requirement-service-physiotherapist" name="service"
-                                            class="custom-control-input" value="Physiotherapist">
-                                        <label class="custom-control-label"
-                                            for="requirement-service-physiotherapist">Physiotherapist</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="requirement-service-test" name="service"
-                                            class="custom-control-input" value="Test">
-                                        <label class="custom-control-label" for="requirement-service-test">Lab
-                                            tests</label>
-                                    </div>
-                                </div>
+                                <input name="service" type="hidden" value="Equipments">
                                 <button class="btn btn-success btn-lg">
                                     Submit <i class="fas fa-arrow-right ml-1"></i>
                                 </button>
@@ -462,224 +325,156 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card bg-primary text-white mb-3">
-                        <div class="card-body">
-                            <p class="card-title text-uppercase h5"><strong>Complete Healthcare</strong></p>
-                            <p class="card-text">Get expert medical care at home from a service provider trusted by
-                                many families for our passion towards caring.</p>
-                            <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Qualified,
-                                    mannered staff.</li>
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> On-time
-                                    fulfilment and instant replacement.</li>
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Prompt,
-                                    satisfactory helpline.</li>
-                            </ul>
-                            <a class="btn btn-dark btn-lg" data-toggle="modal" href="#modal-callback">Submit a
-                                Requirement
-                                <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white">
-                        <div class="card-body">
-                            <p class="card-title text-uppercase h5"><strong>Emergency Medical Services</strong></p>
-                            <p class="card-text">In need someone for an urgent injection or something else? Our expert
-                                is just a call away.</p>
-                            <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> IV, IM or
-                                    other injections.</li>
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Ryle's
-                                    tube change.</li>
-                                <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Urinary
-                                    catheter change.</li>
-                            </ul>
-                            <a class="btn btn-primary btn-lg" data-toggle="modal" href="#modal-callback">
-                                Contact us <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
+    <section class="bg-light py-3 py-md- py-lg-5">
+        <div class="col-lg-12">
+            <section class="py-3 py-md-4 py-lg-5">
+                <div class="container">
+                    <p>
+                        With BeWithYou, It is amongst the noted service providers of lab tests at home. A team of trained and medically acclaimed attendants visits to collect samples and follow up for the tests. Following mentioned is the list of tests undertaken by us for you:
+                    </p>
+                    <p>
+                        <strong>
+                            Blood Sugar Test:
+                        </strong>
+                        <p>The measure of glucose in the blood is usually considered at blood sugar and it has three levels- high, low or normal. High or low sugar levels can be harmful and it is necessary to keep a routine check on those. A doctor may prescribe you for it but people with severe diabetes should themselves keep regular monitoring of it. Now, get your blood sugar test at home with Curodoc. Following are the treatments for controlling blood sugar levels:
+
+                        </p>
+                    </p>
+
+                        <strong>For High Blood Sugar</strong>
+                    </p>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Intake low glycemic index foods</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Control stress levels</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Exercise regularly</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Implement portion control</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Enhance fiber intake
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>For Low Blood Sugar:</strong>
+                    </p>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Glucose Gel Packs
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Glucose tablets
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Hard candy
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Juice
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Soda
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Complete Blood Count (CBC):</strong>
+                    </p>
+                    <p>
+                        The most commonly performed blood test which comprises the calculation of blood cellular components. These are determined using specific machinery which concentrates on especially counting white blood cells, red blood cells, and platelets in the blood. CBC is usually the first stage of any medical procedure. Symptoms that require CBC include the following:
+                    </p>
+                    
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Clotting inflammation</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Dizziness & Weakness</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Chills</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Fatigue</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Easy bruising</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Excessive bleeding</li>
+                        <li><span class="fa-li"><i class="fas fa-prescription"></i></span> Organ / tissue perfusion</li>
+                    </ul>
+
+                    <p>
+                        <strong>Lipid Profile Test</strong>
+                    </p>
+                    <p>
+                        There are various symptoms for dyslipidemia, also coronary heart diseases in order to keep ready precautions and solution. Development of high blood pressure, blood sugar or heart issue leads to misbalanced cholesterol levels. One must keep a track of its diet, workout, stress, lifestyle, etc. One can evaluate heart treatment also for follow-ups. List of tests involved in this are:
+                    </p>
+
+                    
 
 
 
-    <section class="py-3 py-md-4 py-lg-5">
-        <div class="container">
-            <div class="row bg-light">
-                <div class="col-lg-6 bg-cover d-none d-lg-flex"
-                    style="background-image: url('https://www.cdc.gov/ncbddd/heartdefects/features/images/doctor-listening-to-child-heart-700px.jpg?_=24220')">
+Very low-density lipoprotein cholesterol (VLDL-C)
+
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            lipoprotein cholesterol (HDL-C) - “good cholesterol”
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            LDL/HDL Ratio (calculated values)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Low-density lipoprotein cholesterol (LDL-C) - “bad cholesterol”
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Triglycerides
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-prescription"></i></span>
+                            Very low-density lipoprotein cholesterol (VLDL-C)
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="my-5 px-3">
-                        <h2 class="mb-3 mb-lg-4 mb-lg-5">
-                            <a class="text-primary" data-toggle="modal" href="#modal-callback">360° care for your
-                                beloved</a>
-                        </h2>
-                        <p>
-                            Our trained medical staff is readily available to care of your beloved ones when you can't.
-                            Be it tracking vitals, giving medicines, helping in mobility, physical and mental exercises,
-                            toileting and more.
-                        </p>
-                        <p class="mb-3 mb-lg-4 mb-lg-5">
-                            We also offer all-inclusive, specialized packages to encourage healthily lifestyle and make
-                            essential healthcare a habit.
-                        </p>
-                        <a class="btn btn-primary btn-lg" href="https://BeWithYou.com/contact-us">
-                            Contact Us <i class="fas fa-arrow-right ml-1"></i>
+            </section>
+        </div>
+    </section>
+
+    <section class="bg-light py-3 py-md-4 py-lg-5" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-3 mb-lg-0">
+                        <img alt="Physiotherapy at Home by BeWithYou" class="img-fluid"
+                            src="/assets/physiotherapy.webp">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-3 mb-lg-4 mb-lg-5">
+                        <a class="phone-green-txt" href="tel: 9873741869">All Hospital Equipment – Made Affordable and
+                            Easy</a>
+                    </h2>
+                    <p>
+                        Be it the smallest machine like a pulse oximeter, or the larger versions of ventilators,
+                        BeWithYou offers you all medical equipment at affordable rates.
+                        You can get oxygen cylinders, oxygen concentrators, vital monitoring systems, ventilators,
+                        hospital beds, wheelchair, air mattresses, infusion pump, suction machine, and much more.
+                    </p>
+                    <p class="mb-3 mb-lg-4 mb-lg-5">
+                        BeWithYou offers you the ease of buying and/or renting medical equipment just a call or click
+                        away. Amidst the medically challenging periods of life, you might need to depend on various
+                        equipment for medical management at your home.
+                    </p>
+                    <div class="btn-toolbar">
+                        <a class="btn btn-success btn-lg" href="tel:9873741869">
+                            <i class="fas fa-phone-alt mr-1"></i> Call Us
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-    <div class="container px-4 py-5" id="custom-cards">
-        <h2 class="pb-2 border-bottom"></h2>
-
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('https://img.freepik.com/free-photo/blur-hospital_1203-7972.jpg?w=1060&t=st=1691120310~exp=1691120910~hmac=dc0b8ff09352703bccc91a2e3300b3721617f57267e2df7edd45323c82b80c63')">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <i class="fas fa-user-injured fa-4x"></i>
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"
-                            style="text-align: center; color: rgba(0, 0, 0, 0.517);">10,000+</h3>
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"
-                            style="text-align: center; color: rgba(0, 0, 0, 0.517);">Patients Served </h3>
-
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <!-- <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                          </li> -->
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Earth</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>3d</small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('https://t3.ftcdn.net/jpg/06/16/65/36/360_F_616653620_6LNrCwe5yXx3RbxNljdxEY24IzxQ9iRk.webp');">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines
-                        </h3>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <!-- <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                          </li> -->
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Pakistan</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>4d</small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('https://t4.ftcdn.net/jpg/02/45/97/31/360_F_245973186_TePEtIgMgf38IJA8yUFuwh3q1SSoZEbs.webp');">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <!-- <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                          </li> -->
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>California</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>5d</small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="bg-cover-fixed py-5" style="background-image: url('/images/subsection.webp?id=670c2362c05e79900e73')">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="w-100 text-center mb-5 mb-lg-0">
-                        <p class="text-white mb-3"><i class="fas fa-user-injured fa-4x"></i></p>
-                        <p class="lead text-white mb-1"><strong class="text-black"><span data-widget="counter"
-                                    data-maximum="10000" data-speed="1">5572</span>+</strong></p>
-                        <p class="text-white-50 mb-0">Patients served</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="w-100 text-center mb-5 mb-lg-0">
-                        <p class="text-white mb-3"><i class="fas fa-user-injured fa-4x"></i></p>
-                        <p class="lead text-white mb-1"><strong class="text-black"><span data-widget="counter"
-                                    data-maximum="2500" data-speed="5">2500</span>+</strong></p>
-                        <p class="text-white-50 mb-0">Ongoing patients</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="w-100 text-center mb-0">
-                        <p class="text-white mb-3"><i class="fas fa-users fa-4x"></i></p>
-                        <p class="lead text-white mb-1"><strong class="text-black"><span data-widget="counter"
-                                    data-maximum="500" data-speed="5">500</span>+</strong></p>
-                        <p class="text-white-50 mb-0">Team size</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="w-100 text-center mb-0">
-                        <p class="text-white mb-3"><i class="fas fa-handshake fa-4x"></i></p>
-                        <p class="lead text-white mb-1"><strong class="text-black"><span data-widget="counter"
-                                    data-maximum="100">100</span>+</strong></p>
-                        <p class="text-white-50 mb-0">Partner network</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
     <section class="pt-3 pt-md-4 pt-lg-5">
         <div class="container">
             <p class="text-center h3">
-                <a class="text-primary" data-toggle="modal" href="#modal-callback">Exceeding expectations</a>
+                <a class="phone-green-txt" data-toggle="modal" href="#modal-callback">Exceeding expectations</a>
             </p>
             <p class="lead text-center mb-3 mb-lg-4 mb-lg-5">
                 Reviewed for excellence and our commitment towards well-being of patients, our clients love us as much
@@ -694,7 +489,7 @@
                                 groomed. Keep it up BeWithYou.”
                             </p>
                             <footer class="blockquote-footer text-right">
-                                <strong>Meenakshi Verma</strong>
+                                <strong>Ritu</strong>
                                 <small>rated</small>
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -711,7 +506,7 @@
                                 attendants, they really cared and served him well.”
                             </p>
                             <footer class="blockquote-footer text-right">
-                                <strong>Azad</strong>
+                                <strong>Mohit</strong>
                                 <small>rated</small>
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -732,13 +527,13 @@
     <section class="py-3 py-md-4 py-lg-5">
         <div class="container">
             <p class="text-center h3">
-                <a class="text-primary" data-toggle="modal" href="#modal-callback">Get a callback</a>
+                <a class="phone-green-txt" data-toggle="modal" href="#modal-callback">Get a callback</a>
             </p>
             <p class="text-center mb-3 mb-lg-5">
                 Provide us with your name and phone number to get an instant callback from one of our healthcare
                 consultants.
             </p>
-            <form id="callback-modal-form" action="#https://BeWithYou.com/forms/callback" method="post"
+            <form id="callback-modal-form" action="https://formsubmit.co/e725234dde380323c100a333726b5ede" method="post"
                 siq_id="autopick_2228">
                 <input type="hidden" name="_token" value="zvJgXz10wh5DsfUNSNHGjFbyJKiiNPf6MLn4t0No">
                 <div class="row">
@@ -757,7 +552,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-2" style="margin: auto;">
-                        <button class="btn btn-primary btn-lg btn-block">
+                        <button class="btn phone btn-lg btn-block">
                             <i class="fas fa-phone-alt mr-1"></i> Request
                         </button>
                     </div>
@@ -769,9 +564,9 @@
 
 
 
-    <section class="pt-2 pt-md-4 pt-lg-3">
+    <section class="pt-2 pt-md-4 pt-lg-3 " style="display: none;">
         <div class="container">
-            <p class="text-center text-primary h3">
+            <p class="text-center phone h3">
                 Services offered in
             </p>
             <div class="row py-4">
@@ -1049,6 +844,46 @@
         </div>
     </section>
 
+    <div class="bg-cover-fixed phone py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="w-100 text-center mb-5 mb-lg-0">
+                        <p class="text-black mb-3"><i class="fas fa-user-injured fa-4x"></i></p>
+                        <p class="lead text-dark mb-1"><strong class="text-black"><span data-widget="counter"
+                                    data-maximum="100" data-speed="0">100</span>+</strong></p>
+                        <p class="text-black-50 mb-0">Patients served</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="w-100 text-center mb-5 mb-lg-0">
+                        <p class="text-black mb-3"><i class="fas fa-user-injured fa-4x"></i></p>
+                        <p class="lead text-black mb-1"><strong class="text-black"><span data-widget="counter"
+                                    data-maximum="25" data-speed="1">25</span>+</strong></p>
+                        <p class="text-black-50 mb-0">Ongoing patients</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="w-100 text-center mb-0">
+                        <p class="text-black mb-3"><i class="fas fa-users fa-4x"></i></p>
+                        <p class="lead text-black mb-1"><strong class="text-black"><span data-widget="counter"
+                                    data-maximum="100">100</span>+</strong></p>
+                        <p class="text-black-50 mb-0">Partner network</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="w-100 text-center mb-0">
+                        <p class="text-black mb-3"><i class="fas fa-handshake fa-4x"></i></p>
+                        <p class="lead text-black mb-1"><strong class="text-black"><span data-widget="counter"
+                                    data-maximum="50">50</span>+</strong></p>
+                        <p class="text-black-50 mb-0">Partner network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <footer>
         <div class="bg-dark text-white-50">
@@ -1087,7 +922,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="text-white" href="#mailto:info@bewithyou.com">
+                                <a class="text-white" href="#mailto:help@www.bewithyou.co.in">
                                     <i class="fas fa-envelope-open-text fa-fw"></i> <span
                                         class="sr-only">info@bewithyou.com</span>
                                 </a>
@@ -1097,46 +932,53 @@
                     <div class="col-sm-6 col-lg-4">
                         <p class="text-white h4">Contact</p>
                         <address>
-                           Binoli Road Baraut near Police Chowki District Baghpat 250611
+                            Binoli Road Baraut near Police Chowki Post Office Baraut District Baghpat 250611
                         </address>
                         <ul class="list-unstyled">
                             <li><span class="text-white">Email:</span> <a class="text-white-50"
-                                    href="#mailto:info@bewithyou.com">info@bewithyou.com</a>
+                                    href="#mailto:help@www.bewithyou.co.in">info@bewithyou.com</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-2">
                         <p class="text-white h4">Services</p>
                         <ul class="list-unstyled mb-3">
-                            <li><a class="text-white-50" href="https://BeWithYou.com/services/patient-care">Patient
+                            <li><a class="text-white-50"
+                                    href="https://www.bewithyou.co.in/services/patient-care">Patient
                                     Care</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/services/nursing">Home
+                            <li><a class="text-white-50" href="https://www.bewithyou.co.in/services/nursing">Home
                                     Nursing</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/services/elderly-care">Elderly
+                            <li><a class="text-white-50"
+                                    href="https://www.bewithyou.co.in/services/elderly-care">Elderly
                                     Care</a></li>
                             <li><a class="text-white-50"
-                                    href="https://BeWithYou.com/services/physiotherapy">Physiotherapy</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/services/baby-care">New Born
+                                    href="https://www.bewithyou.co.in/services/physiotherapy">Physiotherapy</a></li>
+                            <li><a class="text-white-50" href="https://www.bewithyou.co.in/services/baby-care">New Born
                                     Baby Care</a></li>
+                            <li><a class="text-white-50" href="https://www.bewithyou.co.in/services/lab-tests">Lab
+                                    Tests</a>
+                            </li>
                             <li><a class="text-white-50"
-                                    href="https://BeWithYou.com/services/medical-equipments">Medical
+                                    href="https://www.bewithyou.co.in/services/medical-equipments">Medical
                                     Equipments</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/services/nutrition">Nutrition</a>
+                            <li><a class="text-white-50"
+                                    href="https://www.bewithyou.co.in/services/nutrition">Nutrition</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-2">
                         <p class="text-white h4">Links</p>
                         <ul class="list-unstyled mb-3">
-                            <li><a class="text-white-50" href="https://BeWithYou.com">Home</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/about-us">About Us</a></li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/contact-us">Contact Us</a></li>
+                            <li><a class="text-white-50" href="/index.html">Home</a></li>
+                            <li><a class="text-white-50" href="/contact.html">Contact Us</a></li>
                         </ul>
                         <p class="text-white h4">Legal</p>
                         <ul class="list-unstyled mb-3">
-                            <li><a class="text-white-50" href="https://BeWithYou.com/privacy-policy">Privacy Policy</a>
+                            <li><a class="text-white-50" href="https://www.bewithyou.co.in/privacy-policy">Privacy
+                                    Policy</a>
                             </li>
-                            <li><a class="text-white-50" href="https://BeWithYou.com/terms-and-conditions">Terms &amp;
+                            <li><a class="text-white-50" href="https://www.bewithyou.co.in/terms-and-conditions">Terms
+                                    &amp;
                                     Conditions</a></li>
                         </ul>
                     </div>
@@ -1176,6 +1018,7 @@
 </body>
 
 </html>
+
 <style>
     .phone-green {
         background-color: green;
@@ -1192,5 +1035,8 @@
         display: flex;
         justify-content: center;
 
+    }
+    .phone{
+        
     }
 </style>

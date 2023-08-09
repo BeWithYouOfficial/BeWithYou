@@ -12508,13 +12508,11 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
 }
 
 #section-banner {
-    background: #343a40 url(/images/banner.webp?353f5d3efb829b18d648b88bcc6dd915) 0 no-repeat;
-    background-size:cover
+    background-color: rgb(238, 221, 198);
 }
 
 #section-header {
-    background: #008ccf url(/images/header.webp?3add7d31e845bb3ac496fe1781d42e2c) 0 no-repeat;
-    background-size:cover
+    background-color: rgb(238, 221, 198);
 }
 
 .bg-black {
@@ -13451,3 +13449,6 @@ content-item {
         background-color: rgb(238, 221, 198) ;
     }
 
+    .phone-green-txt{
+        color: green;
+    }
