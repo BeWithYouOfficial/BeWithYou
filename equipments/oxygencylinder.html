@@ -25,7 +25,7 @@
 </head>
 
 <body class="">
-    <header class="sticky-top">
+    <header class="">
         <div class="bg-dark">
             <div class="container px-0">
                 <nav class="navbar navbar-expand navbar-dark py-1">
@@ -48,9 +48,9 @@
                                     class="fab fa-instagram fa-fw"></i> <span class="sr-only">Instagram</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="mailto: info@bewithyou.com">
+                            <a class="nav-link" href="mailto:info@bewithyou.com">
                                 <i class="fas fa-envelope-open-text fa-fw"></i> <span
-                                    class="sr-only">xyj@gmail.com</span>
+                                    class="sr-only">info@bewithyou.co.in</span>
                             </a>
                         </li>
                     </ul>
@@ -59,16 +59,16 @@
                             <a class="nav-link" onclick="gtag_report_conversion();" href="tel:+919873741869">
                                 <i class="fas fa-phone-alt fa-fw"></i> <strong
                                     class="d-none d-sm-inline">Phone:</strong>
-                                <span class="text-white">+91 98737 41869</span>
+                                <span class="text-white">+91 9873741869, 7428561869</span>
                             </a>
                         </li>
                         <li class="nav-item d-none d-md-block">
                             <span class="nav-link px-0">|</span>
                         </li>
                         <li class="nav-item d-none d-md-block">
-                            <a class="nav-link" href="xyz.com">
+                            <a class="nav-link" href="info@bewithyou.co.in">
                                 <strong class="d-none d-sm-inline">Email:</strong>
-                                <span class="text-white">xyz.com</span>
+                                <span class="text-white">info@bewithyou.co.in</span>
                             </a>
                         </li>
                     </ul>
@@ -78,10 +78,10 @@
         <script>
             window.packages = { "couple": { "1": 2000, "3": 4000, "12": 6000 }, "family": { "1": 4000, "3": 8000, "12": 12000 }, "three60": { "1": 6000, "3": 12000, "12": 24000 } }
         </script>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light nav1 shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                     <img alt="logo" height="67" src="/assets/bewithyou.jpeg">
+                    <img alt="logo" height="150" src="/assets/bewithyou.jpeg">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main"
                     aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
@@ -223,14 +223,15 @@
 
                     </ul>
                     <div class="btn-toolbar ml-2 d-none d-lg-block">
-                        <a onclick="gtag_report_conversion();" class="btn btn-primary d-none d-xl-inline-block ml-2"
-                            href="#tel:9873741869">Call
-                            <strong>+91 98737 41869</strong></a>
+                        <a onclick="gtag_report_conversion();" class="btn phone d-none d-xl-inline-block ml-2"
+                            href="#tel:7428561869">Call
+                            <strong>+91 7428561869</strong></a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="modal fade" id="modal-callback" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -367,31 +368,62 @@
         <div class="container">
             <div class="row">
                 <div class=" col-lg-6  ">
-                    <div class="card shadow mb-3 mb-lg-0">
+                   <div class="card phone shadow mb-3 mb-lg-0">
                         <div class="card-body">
-                            <p class="card-title h5">
-                                <a class="text-secondary" data-toggle="modal" href="#modal-callback">Get in touch with
-                                    our expert</a>
-                            </p>
+                            <p class="card-title text-uppercase h5"><strong>Talk to a Consultant</strong></p>
                             <p class="card-text mb-3 mb-md-4 mb-lg-5">
-                                Get a callback from our executive to talk further about your requirements.
+                                Submit your requirement with us and speak to one of our expert healthcare consultants.
                             </p>
-                            <form action="https://formsubmit.co/e725234dde380323c100a333726b5ede" method="POST">
-                                <input type="hidden" name="_token" value="6OD8xKGC2a5d6Regfn31OzxSeZPmogLhvAlkdLu9">
-                                <input type="hidden" name="service" value="Equipments">
+                            <form id="inquiry-form" action="https://www.www.bewithyou/forms/requirement" method="post"
+                                siq_id="autopick_784">
+                                <input type="hidden" name="_token" value="zvJgXz10wh5DsfUNSNHGjFbyJKiiNPf6MLn4t0No">
                                 <div class="form-group">
-                                    <label for="requirement-name">Name <span class="text-danger">&ast;</span></label>
+                                    <label for="requirement-name">Name <span class="text-danger">*</span></label>
                                     <input class="form-control form-control-lg " id="requirement-name" name="name"
-                                        required value="">
+                                        required="" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="requirement-phone">Phone number <span
-                                            class="text-danger">&ast;</span></label>
+                                            class="text-danger">*</span></label>
                                     <input class="form-control form-control-lg " id="requirement-phone" name="phone"
-                                        required type="tel" value="">
+                                        required="" type="tel" value="">
                                 </div>
-                                <input name="service" type="hidden" value="Equipments">
-                                <button class="btn btn-secondary btn-lg">
+                                <div class="form-group">
+                                    <label for="requirement-service-attendant">Service <span
+                                            class="text-danger">*</span></label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="requirement-service-doc" name="service"
+                                            class="custom-control-input" value="Doctor">
+                                        <label class="custom-control-label" for="requirement-service-doc">Doctor on
+                                            call</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="requirement-service-nurse" name="service"
+                                            class="custom-control-input" value="Nurse">
+                                        <label class="custom-control-label" for="requirement-service-nurse">Medical
+                                            nurse</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="requirement-service-attendant" name="service"
+                                            class="custom-control-input" value="Attendant" checked="">
+                                        <label class="custom-control-label" for="requirement-service-attendant">Care
+                                            taker
+                                            or attendant</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="requirement-service-physiotherapist" name="service"
+                                            class="custom-control-input" value="Physiotherapist">
+                                        <label class="custom-control-label"
+                                            for="requirement-service-physiotherapist">Physiotherapist</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="requirement-service-test" name="service"
+                                            class="custom-control-input" value="Test">
+                                        <label class="custom-control-label" for="requirement-service-test">Lab
+                                            tests</label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-lg">
                                     Submit <i class="fas fa-arrow-right ml-1"></i>
                                 </button>
                             </form>

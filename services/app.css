@@ -13447,9 +13447,9 @@ content-item {
     bottom: 40px;
     right:20px;
     }
-    body{
+    .phone{
         background-color: rgb(238, 221, 198) ;
     }
-    #nav1{
-        background-color: rgb(238, 221, 198);
+    .phone-green-txt{
+        color: green;
     }
