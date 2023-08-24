@@ -1,1 +1,3 @@
+# bewithyou.com/ads.txt
+# DOMESTIC
 google.com, pub-8991336148031453, DIRECT, f08c47fec0942fa0
